@@ -1,7 +1,7 @@
 /*Adding a randomly action for computer with bellow function*/
 function computerPlay(){
-    const pcstate = ["Rock", "Paper", "Scissors"]
-    return ranstate = pcstate[Math.floor(Math.random() * pcstate.length)];
+    const pcState = ["Rock", "Paper", "Scissors"]
+    return ranState = pcstate[Math.floor(Math.random() * pcstate.length)];
 }
 
 /* Checking the playerSelection vs computerSelection */
@@ -42,8 +42,8 @@ function game(){
         const section2 = actionChoose.slice(1).toLowerCase(); /* take the second word to the rest of word selected player action then change to lowercase */
         const playerSelection = section1+section2; /* join the section1 and section2 then store them into playerSelection */
         const computerSelection = computerPlay(); /* calling function computerPlay then store it to computerSelection */
-        matchplay = actionPlay(playerSelection,computerSelection); /* calling funtion actionPlay */
-        matchround = "Match - "+i; /* count the match */
+        matchPlay = actionPlay(playerSelection,computerSelection); /* calling funtion actionPlay */
+        matchRound = "Match - "+i; /* count the match */
         console.log(matchround, matchplay); /* print the matchround and matchplay */
      }
 }
