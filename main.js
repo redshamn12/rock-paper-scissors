@@ -1,7 +1,7 @@
 /*Adding a randomly action for computer with bellow function*/
 function computerPlay(){
     const pcState = ["Rock", "Paper", "Scissors"]
-    return ranState = pcstate[Math.floor(Math.random() * pcstate.length)];
+    return ranState = pcState[Math.floor(Math.random() * pcState.length)];
 }
 
 /* Checking the playerSelection vs computerSelection */
