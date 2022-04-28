@@ -44,7 +44,7 @@ function game(){
         const computerSelection = computerPlay(); /* calling function computerPlay then store it to computerSelection */
         matchPlay = actionPlay(playerSelection,computerSelection); /* calling funtion actionPlay */
         matchRound = "Match - "+i; /* count the match */
-        console.log(matchround, matchplay); /* print the matchround and matchplay */
+        console.log(matchRound, matchPlay); /* print the matchround and matchplay */
      }
 }
 
