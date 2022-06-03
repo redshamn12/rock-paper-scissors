@@ -31,11 +31,12 @@ function actionPlay(playerSelection, computerSelection){
         console.log(resultx);
     }
 
-    
+    /* checking tie result */
     if(playerSelection === "rock" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "paper" || playerSelection === "scissors" && computerSelection === "scissors"){
         cresultx = "Tie! Player: "+playerSelection+" vs Computer: "+computerSelection;
         console.log(resultx);
-    } 
+    }
+     
     if(playerSelection === "rock" && computerSelection === "paper"){ /*check player rock vs computer paper */
         resultx = "You lose! Computer: "+computerSelection+" beats Player: "+playerSelection;
         console.log(resultx);
