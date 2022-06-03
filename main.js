@@ -95,4 +95,6 @@ function resetGame(){
     hideAction.style = "display: show";
     playAgain.style = "display: none";
     finals.innerHTML = "";
+    players.innerHTML = playerScore;
+    computers.innerHTML = computerScore;
 }
