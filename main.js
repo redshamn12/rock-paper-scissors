@@ -9,6 +9,7 @@ let rbuttons = document.querySelector(".rbutton");
 let players = document.querySelector(".player-score");
 let computers = document.querySelector(".computer-score");
 let finals = document.querySelector(".final-res");
+let matchRes = document.querySelector(".q-res");
 let playAgain = document.querySelector(".play-again");
 let hideAction = document.querySelector("#action-button");
 
@@ -48,7 +49,7 @@ function actionPlay(playerSelection, computerSelection){
 
     /* checking tie result */
     if(playerSelection === "rock" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "paper" || playerSelection === "scissors" && computerSelection === "scissors"){
-        cresultx = "Tie! Player: "+playerSelection+" vs Computer: "+computerSelection;
+        resultx = "Tie! Player: "+playerSelection+" vs Computer: "+computerSelection;
     }
 
     if(playerSelection === "rock" && computerSelection === "paper"){ /*check player rock vs computer paper */
@@ -70,6 +71,7 @@ function actionPlay(playerSelection, computerSelection){
         resultx = "You lose! Computer: "+computerSelection+" beats Player: "+playerSelection;
         computerScore = ++computerScore;
     }
+    matchRes.innerHTML = resultx;
     game();
     } 
     
@@ -77,11 +79,13 @@ function actionPlay(playerSelection, computerSelection){
 /* Main function for the game, round is 5 times */
 function game(){
     if (computerScore >= playerScore && computerScore === 5) {
+        document.createElement("br");
         finals.innerHTML = "Match end, the winner is Computer";
         playAgain.style = "display: block";
         hideAction.style = "display: none";
 
      }else if (playerScore >= computerScore && playerScore === 5){
+        document.createElement("br");
         finals.innerHTML = "Match end, the winner is You";
         playAgain.style = "display: block";
         hideAction.style = "display: none";
@@ -95,6 +99,7 @@ function resetGame(){
     hideAction.style = "display: show";
     playAgain.style = "display: none";
     finals.innerHTML = "";
+    matchRes.innerHTML = "";
     players.innerHTML = playerScore;
     computers.innerHTML = computerScore;
 }
