@@ -9,14 +9,22 @@
     <body>
         <h1 id="title">You vs Computer</h1>
         <p>Choose your action!</p>
-        <div id="action-button">
+        <div id="action-button" style="display: show;">
             <input type="button" class="cbutton" value="Rock"></input>
             <input type="button" class="cbutton" value="Paper"></input>
             <input type="button" class="cbutton" value="Scissors"></input>
         </div>
+        <br>
+        <div class="play-again" style=" display: none;">
+            <input type="button" class="rbutton" value="Play again"></input>
+        </div>
+
+        <p class="final-res"></p>
         <div id="result">
             <p class="label">You</p>
+            <p class="player-score">0</p>
             <p class="label">Computer</p>
+            <p class="computer-score">0</p>
         </div>
     </body>
 
